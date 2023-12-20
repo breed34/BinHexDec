@@ -1,0 +1,115 @@
+:root {
+  --light-bg: #e7e7e7;
+  --dark-bg: #3a3a3a;
+
+  --light-font: #3a3a3a;
+  --dark-font: #e7e7e7;
+
+  --light-accent: #c9c9c9;
+  --dark-accent: #2b2b2b;
+
+  --background-color: var(--light-bg);
+  --font-color: var(--light-font);
+  --accent-color: var(--light-accent);
+}
+
+* {
+  margin: 0;
+  font-size: 20px;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: 'Lucida Sans',
+    'Lucida Sans Regular',
+    'Lucida Grande',
+    'Lucida Sans Unicode',
+    Geneva,
+    Verdana,
+    sans-serif;
+  transition: background-color 300ms,
+    color 300ms,
+    accent-color 300ms;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--accent-color);
+}
+
+header * {
+  background-color: var(--accent-color);
+}
+
+header, main {
+  padding: 20px;
+}
+
+main {
+  padding-top: 24px;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 16px;
+}
+
+span > label {
+  display: block;
+}
+
+.bin-hex-dec > * {
+  width: 300px;
+  display: block;
+  margin: 8px 0;
+}
+
+.bin-hex-dec input {
+  margin-bottom: 16px;
+}
+
+input {
+  height: 40px;
+  background-color: var(--accent-color);
+  border: none;
+  outline: none;
+  text-align: center;
+  accent-color: var(--accent-color);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+}
+
+input[type="checkbox"]:checked::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '\220E';
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#numBits {
+  width: 80px;
+}
+
+#twosComp {
+  width: 32px;
+  height: 32px;
+}
+
+img {
+  cursor: pointer;
+}
